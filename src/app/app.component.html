@@ -1,18 +1,14 @@
+<!-- this page is controlling things in the app.component.ts file -->
+
 {{title}}
 
 <br><br>
 
 <input type="text" [(ngModel)]="title">
 
-<ul>
-  <li *ngFor="let favoriteThing of favoriteThings" (click)="clickedThing(favoriteThing)">{{favoriteThing.name}}</li>
-</ul>
+<hr>
 
-<br>
-<br>
-
-<div *ngIf="selectedThing">
-  Update the selected thing: <input type="text" [(ngModel)]="selectedThing.name">
-</div>
+<!-- include another component for our favorite things -->
+<app-favorite-things></app-favorite-things>
 
 
